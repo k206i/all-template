@@ -4,14 +4,9 @@
 
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Popup extends Component {
-
-  componentDidMount() {
-    setTimeout(() => {
-      //document.getElementById('popup').classList.add('popup_loaded');
-    }, 10);
-  }
 
   onCloseClick = (event) => {
     event.preventDefault();
@@ -36,3 +31,7 @@ export default class Popup extends Component {
     )
   }
 }
+
+Popup.propTypes = {
+  popupContent: PropTypes.object,
+};

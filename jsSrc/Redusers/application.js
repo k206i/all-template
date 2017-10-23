@@ -13,9 +13,14 @@ export default function application(state = initialState, action) {
 
   switch (action.type) {
     case TEST_CLICK:
-      return {...state, buttonClickedText: action.payload};
+      return {
+        ...state,
+        buttonClickedText: action.payload};
     case SHOW_POPUP:
-      return {...state, popupContent: action.payload};
+      return {
+        ...state,
+        popupContent: action.payload,
+        buttonClickedText: 'кнопка попапа'};
     default:
       return state;
   }
